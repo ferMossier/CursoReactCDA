@@ -1,4 +1,3 @@
-import Counter from './Components/Counter/Counter';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 
@@ -9,7 +8,6 @@ function App() {
         <>
             <Header />
             <Main saludo="Bienvenidos" numero={10} />
-            <Counter />
             <Footer />
         </>
     );

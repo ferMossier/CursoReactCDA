@@ -1,34 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import Boton from '../UI/Boton';
-import Layout from '../UI/Layout';
-import styles from './Main.module.css';
+import React from "react";
+import styles from "./Main.module.css";
+import Counter from "../Counter/Counter";
 
-const Main = ({ saludo }) => {
-    const [count, setCount] = useState(0);
+const Main = () => {
+  const onAdd = () => {
+    console.log("agregado al carrito");
+  };
 
-    useEffect(() => {
-        console.log('me muestro una sola vez');
-        //trer info de una API externa
-    }, []);
-
-    useEffect(() => {
-        console.log('me muestro cada vez que cambia la dependencia');
-        //trer info de una API externa
-    }, [count]);
-
-    console.log('Me muestro en cada render');
-
-    return (
-        <div className={styles.main}>
-            <h2 onClick={() => setCount(count + 1)}>Main</h2>
-            <Layout>
-                <p>{saludo}</p>
-                <h2>Otro children</h2>
-                <Boton variant="primary" texto="Soy el boton del main" />
-                <Boton variant="secondary" texto="Soy otro boton del main" />
-            </Layout>
-        </div>
-    );
+  return (
+    <div className={styles.main}>
+      <Counter init={0} stock={10} onAdd={onAdd} />
+    </div>
+  );
 };
 
 export default Main;
