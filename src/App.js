@@ -7,7 +7,7 @@ function App() {
     return (
         <>
             <Header />
-            <Main saludo="Bienvenidos" numero={10} />
+            <Main />
             <Footer />
         </>
     );
