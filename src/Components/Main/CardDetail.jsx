@@ -14,10 +14,11 @@ const CardDetail = ({ item }) => {
           <h3>{item.name}</h3>
           <h4>$ {item.price}</h4>
         </div>
-      </div>
-      <div>
+        <div>
         <Counter initial={1} stock={10} onAdd={onAdd}/>
       </div>
+      </div>
+      
     </>
   );
 };

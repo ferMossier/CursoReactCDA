@@ -1,27 +1,17 @@
-.cardDetail {
+.CardDetail {
     box-shadow: 0px 0px 10px 1px rgba(10, 148, 234, 0.497);
-    margin: 15px;
-    width: 30%;
+    margin: 55px;
+    width: 50%;
     display: flex;
-    transition: all 0.2s ease-in-out;
 }
 
-.cardDetail:hover {
-    box-shadow: 2px 2px 10px 1px rgba(63, 63, 63, 0.347);
-    transform: scale(1.03);
-}
-
-.cardDetail img {
-    width: 170px;
+.CardDetail img {
+    width: 300px;
     object-fit: cover;
 }
 
-.cardDetail .info {
-    padding: 10px;
-    border-left: 5px solid rgba(204, 204, 204, 0.278);
-}
 
-.cardDetail .info h3 {
+.CardDetail h3 {
     font-size: 17px;
     font-style: italic;
     margin-bottom: 7px;
@@ -31,7 +21,3 @@
     border-radius: 5px;
 }
 
-.cardDetail .info h4 {
-    font-size: 16px;
-    font-weight: 300;
-}
