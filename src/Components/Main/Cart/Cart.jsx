@@ -14,7 +14,7 @@ const Cart = () => {
               display: "flex",
               border: "1px solid black",
               margin: "10px",
-              padding: "9px",
+              padding: "10px",
             }}
           >
             <img src={prod.img} alt={prod.name} width="70px" />
