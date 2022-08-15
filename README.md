@@ -16,3 +16,8 @@ Proyecto número 1 del curso de **React** dictado por Eric Wajnrajch y facilitad
 3. Correr el proyecto
    
    `npm start`
+
+## Librerías utilizadas
+
+- react-router-dom
+  - Utilizado para implementar ruteo dinámico en la aplicación
