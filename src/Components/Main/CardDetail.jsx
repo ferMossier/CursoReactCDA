@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./CardDetail.module.css";
 import Counter from "../Counter/Counter";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../Contexts/CartContext";
 
 //Componente  presentacional
 const CardDetail = ({ item }) => {
-  const onAdd = () => {
-    console.log("producto agregado al carrito");
+  const { addToCart } = useContext(CartContext);
+
+  const onAdd = (cantidad) => {
+    addToCart(item, cantidad);
+    navigate("/cart");
+    // console.log(cantidad);
   };
-//El hook useNavigate permite navegar en forma programática. Util para logins, formularios, etc.
+  //El hook useNavigate permite navegar en forma programática. Util para logins, formularios, etc.
   const navigate = useNavigate();
 
   const finalizarCompra = () => {
