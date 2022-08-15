@@ -17,10 +17,6 @@ const CardDetail = ({ item }) => {
   //El hook useNavigate permite navegar en forma programática. Util para logins, formularios, etc.
   const navigate = useNavigate();
 
-  const finalizarCompra = () => {
-    navigate("/cart");
-  };
-
   return (
     <>
       <div className={style.CardDetail}>
@@ -36,7 +32,6 @@ const CardDetail = ({ item }) => {
             <Counter initial={1} stock={item.stock} onAdd={onAdd} />
           )}
         </div>
-        <button onClick={finalizarCompra}>Finalizar Compra</button>
       </div>
     </>
   );
