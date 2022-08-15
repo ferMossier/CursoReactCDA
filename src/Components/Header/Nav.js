@@ -2,11 +2,15 @@ import React from "react";
 import s from "./Nav.module.css";
 import carrito from "../../Assets/cart.svg";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../Contexts/CartContext";
 
 //Otra opción a Link es NavLink, que ofrece lo mismo que Link pero además agrega
 //una clase al componente renderizado.
 
 const Nav = ({ isInHeader, prueba }) => {
+  const { totalUnidades } = useContext(CartContext);
+
   return (
     <nav className={isInHeader ? s.nav : s.navFooter}>
       <Link to="/">
@@ -24,6 +28,7 @@ const Nav = ({ isInHeader, prueba }) => {
       </ul>
       <Link to="/cart">
         <img src={isInHeader ? carrito : "logo192.png"} alt="logo" />
+        <span>{totalUnidades}</span>
       </Link>
     </nav>
   );
