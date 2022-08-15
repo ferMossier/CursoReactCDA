@@ -4,7 +4,7 @@ import Counter from "../Counter/Counter";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../../Contexts/CartContext";
 import { isIn } from "../../Utils/utils";
-//Componente  presentacional
+
 const CardDetail = ({ item }) => {
   const { addToCart, cart } = useContext(CartContext);
 
@@ -12,9 +12,7 @@ const CardDetail = ({ item }) => {
   const onAdd = (cantidad) => {
     addToCart(item, cantidad);
     navigate("/cart");
-    // console.log(cantidad);
   };
-  //El hook useNavigate permite navegar en forma programática. Util para logins, formularios, etc.
   const navigate = useNavigate();
 
   return (

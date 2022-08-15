@@ -6,17 +6,12 @@ const Form = () => {
   const [telefono, setTelefono] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    //target hace referencia a la etiqueta que disparó el evento (formulario)
-    // const nombre = e.target.elements.nombre.value;
-    // const email = e.target.elements.email.value;
-    // const telefono = e.target.elements.telefono.value;
     const data = {
       nombre,
       email,
       telefono,
     };
     console.log(data);
-    //console.dir
   };
   const handleChangeName = (e) => {
     e.preventDefault();

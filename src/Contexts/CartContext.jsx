@@ -12,11 +12,9 @@ const CartProvider = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalUnidades, setTotalUnidades] = useState(0);
 
-  //Función para conectar mi contexto con la información necesaria
   const addToCart = (item, cantidad) => {
     console.log({ ...item, cantidad });
     if (isInCart(item.id)) {
-      // Sumar Cantidad
       sumarCantidad(item, cantidad);
     } else {
       setCart([...cart, { ...item, cantidad }]);
@@ -52,7 +50,6 @@ const CartProvider = ({ children }) => {
   };
 
   const total = useCallback(() => {
-    // return cart.reduce((acc, prod) => acc + prod.price * prod.cantidad, 0);
     const copia = [...cart];
     let count = 0;
     copia.forEach((prod) => {
@@ -62,7 +59,6 @@ const CartProvider = ({ children }) => {
   }, [cart]);
 
   const unidades = useCallback(() => {
-    // return cart.reduce((acc, prod) => acc + prod.price * prod.cantidad, 0);
     const copia = [...cart];
     let count = 0;
     copia.forEach((prod) => {

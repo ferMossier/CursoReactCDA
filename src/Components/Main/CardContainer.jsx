@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CardList from "./CardList";
 
-//Componente contenedor
-//Mantiene el estado. Son componentes de lógica
 const CardContainer = () => {
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);

@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../Contexts/CartContext";
 
-//Otra opción a Link es NavLink, que ofrece lo mismo que Link pero además agrega
-//una clase al componente renderizado.
-
 const Nav = ({ isInHeader, prueba }) => {
   const { totalUnidades } = useContext(CartContext);
 

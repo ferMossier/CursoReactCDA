@@ -14,8 +14,6 @@ const Counter = ({ stock, initial, onAdd }) => {
   const reset = () => {
     setCount(initial);
   };
-  //En esta función sucede el state uplifting (pasaje de info de hijo a padre)
-  //Sucede porque el padre le pasa una función al hijo y este ejecuta esa función enviándole un dato como parámetro
   const agregar = () => {
     onAdd(count);
   };

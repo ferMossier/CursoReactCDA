@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CardDetail from "./CardDetail";
 
-//Componente de lógica.
 const DetailContainer = () => {
   const [item, setItem] = useState({});
   const { id } = useParams();
