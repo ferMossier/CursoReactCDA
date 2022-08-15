@@ -17,18 +17,37 @@ const Nav = ({ isInHeader, prueba }) => {
         <h2>CDA</h2>
       </Link>
       <ul>
-        <Link
-          to={isInHeader ? "/category/remeras" : "https://www.instagram.com/"}
-          onClick={prueba}
-        >
-          {isInHeader ? "Remeras" : "Instagram"}
+        <Link to={isInHeader && "/category/remeras"} onClick={prueba}>
+          {isInHeader ? (
+            "Remeras"
+          ) : (
+            <a href="https://www.instagram.com/">Instagram</a>
+          )}
         </Link>
-        <Link to="/category/camisas">{isInHeader ? "Camisas" : "Facebok"}</Link>
-        <Link to="/category/gorras">{isInHeader ? "Gorras" : "Linkedin"}</Link>
+        <Link to={isInHeader && "/category/camisas"}>
+          {isInHeader ? (
+            "Camisas"
+          ) : (
+            <a href="https://www.facebook.com/">Facebok</a>
+          )}
+        </Link>
+        <Link to={isInHeader && "/category/gorras"}>
+          {isInHeader ? (
+            "Gorras"
+          ) : (
+            <a href="https://www.Linkedin.com/">Linkedin</a>
+          )}
+        </Link>
+        <Link to="/category/billeteras">{isInHeader && "Billeteras"}</Link>
+        <Link to="/category/rinoneras">{isInHeader && "Riñoneras"}</Link>
       </ul>
-      <Link to="/cart">
-        <img src={isInHeader ? carrito : "logo192.png"} alt="logo" />
-        <span>{totalUnidades}</span>
+      <Link to={isInHeader && "/cart"}>
+        {isInHeader ? (
+          <img src={carrito} alt="logo" />
+        ) : (
+          <img src="logo192.png" alt="logo" />
+        )}
+        <span>{isInHeader && totalUnidades}</span>
       </Link>
     </nav>
   );
